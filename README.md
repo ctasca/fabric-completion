@@ -12,7 +12,7 @@ Long options (like `--help`, `--version` etc.) are cached only when completion i
 
 ## Installation
 
-Download and add to your `.bashrc` file:
+Download and add to your `.bashrc` or `.zshrc` file:
 
 ```bash
 source /path/to/file/fabric-completion.bash
@@ -29,7 +29,7 @@ There are two params:
 
     Enabled by default.
 
-    To disable add add the following line to your `.bashrc`:
+    To disable add add the following line to your `.bashrc` or `.zshrc`:
 
     ```bash
     export FAB_COMPLETION_CACHE_TASKS=false
@@ -39,7 +39,7 @@ There are two params:
 
     Default value is `.fab_tasks~`.
 
-    To change the name, add the following line to your `.bashrc`:
+    To change the name, add the following line to your `.bashrc` or `.zshrc`:
 
     ```bash
     export FAB_COMPLETION_CACHED_TASKS_FILENAME="<cache-file-name>"
