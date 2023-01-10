@@ -33,7 +33,7 @@
 
 
 # Use cache files for fab tasks or not.
-# If set to "false" command "fab --shortlist" will be executed every time.
+# If set to "false" command "fab --complete" will be executed every time.
 export FAB_COMPLETION_CACHE_TASKS=true
 
 # File name where tasks cache will be stored (in current dir).
@@ -106,13 +106,13 @@ function __fab_completion() {
                     if [[ ! -s $FAB_COMPLETION_CACHED_TASKS_FILENAME ||
                           $(__fab_fabfile_mtime) -gt $(__fab_chache_mtime) ]]
                     then
-                        fab --shortlist > $FAB_COMPLETION_CACHED_TASKS_FILENAME \
+                        fab --complete > $FAB_COMPLETION_CACHED_TASKS_FILENAME \
                             2> /dev/null
                     fi
                     opts=$(cat $FAB_COMPLETION_CACHED_TASKS_FILENAME)
                 else
                     # Without cache
-                    opts=$(fab --shortlist 2> /dev/null)
+                    opts=$(fab --complete 2> /dev/null)
                 fi
             fi
             ;;
