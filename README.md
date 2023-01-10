@@ -1,4 +1,4 @@
-# Bash completion for [Fabric](http://fabfile.org)
+# Bash completion for [Fabric 2](http://fabfile.org)
 
 
 ## Features
